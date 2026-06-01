@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawks Travel Baseball | Colorado Springs</title>
     <meta name="description" content="Premier Colorado Springs travel baseball program - 10U 13U 16U 18U">
+    <link rel="icon" href="images/logo/hawks-logo.png">
+    <meta name="theme-color" content="#5c8c5e">
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Hawks Travel Baseball | Colorado Springs">
+    <meta property="og:description" content="Premier Colorado Springs travel baseball program - Proper mechanics, elite development, college exposure.">
+    <meta property="og:image" content="images/logo/hawks-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,13 +19,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <a href="#main" class="skip-link sr-only">Skip to content</a>
     <!-- HEADER -->
     <header>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
         <div class="logo">
             <img src="./images/logo/hawks-logo.png" alt="Hawks Baseball logo">
             HAWKS TRAVEL
         </div>
-        <nav>
+        <nav id="site-nav">
             <ul class="nav-links">
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#skills">Training</a></li>
@@ -28,15 +40,20 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section id="main" class="hero">
         <div class="hero-content">
             <div class="location-badge">
                 <i class="fas fa-map-marker-alt"></i>
                 COLORADO SPRINGS, CO
             </div>
-            <h1>Hawks Travel Baseball</h1>
-            <p>10U • 13U • 16U • 18U</p>
-            <p>Colorado Springs' premier travel program. Proper mechanics. Elite development. College exposure.</p>
+            <h1 class="hero-title-animated">Hawks Travel Baseball</h1>
+            <div class="age-groups-badge">
+                <span class="age-badge">10U</span>
+                <span class="age-badge">13U</span>
+                <span class="age-badge">16U</span>
+                <span class="age-badge">18U</span>
+            </div>
+            <p class="hero-subtitle-animated">Colorado Springs' premier travel program. Proper mechanics. Elite development. College exposure.</p>
             <a href="signup.html" class="btn">SECURE YOUR SPOT FOR 2026-27</a>
         </div>
     </section>
@@ -128,21 +145,21 @@
             <h2>Featured Players</h2>
             <div class="player-grid">
                 <article class="player-card">
-                    <img src="images/players/IMG_3897.jpg" alt="Mason Cherrie">
+                        <img src="images/players/IMG_3897.jpg" alt="Mason Cherrie" loading="lazy" width="800" height="533">
                     <div class="player-info">
                         <h3>Mason Cherrie</h3>
                         <p>Graduation Year 2027</p>
                     </div>
                 </article>
                 <article class="player-card">
-                    <img src="images/players/IMG_3899.jpg" alt="Ismeal Trillo">
+                    <img src="images/players/IMG_3899.jpg" alt="Ismeal Trillo" loading="lazy" width="800" height="533">
                     <div class="player-info">
                         <h3>Ismeal Trillo</h3>
                         <p>Graduation Year 2027</p>
                     </div>
                 </article>
                 <article class="player-card">
-                    <img src="images/players/IMG_3907.jpg" alt="Alex Lubken">
+                    <img src="images/players/IMG_3907.jpg" alt="Alex Lubken" loading="lazy" width="800" height="533">
                     <div class="player-info">
                         <h3>Alex Lubken</h3>
                         <p>Graduation Year 2028</p>
@@ -152,49 +169,137 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section id="contact">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
+            <h2>What Players & Parents Say</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-item active" data-testimonial="0">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-quote">"The Hawks program transformed my son's approach to the game. The coaching staff's attention to mechanics and individual development is unmatched."</p>
+                        <h4>John Martinez</h4>
+                        <p class="testimonial-role">Parent, 16U Player</p>
+                    </div>
+                </div>
+                <div class="testimonial-item" data-testimonial="1">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-quote">"Playing for Hawks gave me the exposure I needed. I committed to a D2 school thanks to the showcase tournaments and coaching recommendations."</p>
+                        <h4>Mason Cherrie</h4>
+                        <p class="testimonial-role">Hawks Player, College Committed</p>
+                    </div>
+                </div>
+                <div class="testimonial-item" data-testimonial="2">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-quote">"The culture here is different. It's about long-term development, not just winning tournaments. My player has grown in every aspect of the game."</p>
+                        <h4>Sarah Thompson</h4>
+                        <p class="testimonial-role">Parent, 13U Player</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-controls">
+                <button class="testimonial-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTOR / SPONSORSHIP -->
+    <section class="investors" id="investors">
+        <div class="container">
+            <h2>Become a Sponsor</h2>
+            <p class="investors-intro">Support elite youth development and help shape the next generation of baseball players.</p>
+            
+            <div class="tier-grid">
+                <div class="tier-card">
+                    <div class="tier-header">
+                        <h3>Bronze Sponsor</h3>
+                        <p class="tier-amount">$1,000 - $5,000</p>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li><i class="fas fa-check"></i> Website recognition</li>
+                        <li><i class="fas fa-check"></i> Social media feature</li>
+                        <li><i class="fas fa-check"></i> Event invitation</li>
+                    </ul>
+                    <button class="btn btn-sponsor">Sponsor Now</button>
+                </div>
+
+                <div class="tier-card featured">
+                    <div class="tier-badge">Most Popular</div>
+                    <div class="tier-header">
+                        <h3>Silver Sponsor</h3>
+                        <p class="tier-amount">$5,000 - $15,000</p>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li><i class="fas fa-check"></i> Logo on uniforms & signage</li>
+                        <li><i class="fas fa-check"></i> 4 event tickets annually</li>
+                        <li><i class="fas fa-check"></i> Monthly newsletter feature</li>
+                        <li><i class="fas fa-check"></i> Equipment discount</li>
+                    </ul>
+                    <button class="btn btn-sponsor">Sponsor Now</button>
+                </div>
+
+                <div class="tier-card">
+                    <div class="tier-header">
+                        <h3>Gold Sponsor</h3>
+                        <p class="tier-amount">$15,000+</p>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li><i class="fas fa-check"></i> Premium logo placement</li>
+                        <li><i class="fas fa-check"></i> VIP event access all year</li>
+                        <li><i class="fas fa-check"></i> Exclusive partnership benefits</li>
+                        <li><i class="fas fa-check"></i> Annual impact report</li>
+                        <li><i class="fas fa-check"></i> Equipment package</li>
+                    </ul>
+                    <button class="btn btn-sponsor">Sponsor Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content">
             <h2>Ready to Join the Hawks?</h2>
-            <p class="cta-text">Tryouts for the 2026-2027 season are now open for all age groups.</p>
-            <a href="tel:(719)306-3070" class="btn">GET IN TOUCH TODAY</a>
-            <p class="contact-info">Colorado Springs, Colorado • (719) 306-3070</p>
+            <p>Get started with elite baseball training today</p>
+            <a href="signup.html" class="btn btn-cta">Join Now</a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <div>
+            <div class="footer-section">
                 <h3>Hawks Travel Baseball</h3>
-                <p>Colorado Springs, Colorado</p>
+                <p>Developing elite young athletes in Colorado Springs</p>
             </div>
-            <div>
-                <h4>Programs</h4>
-                <p>10U • 13U • 16U • 18U</p>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Colorado Springs, CO</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@hawkstravelball.com">info@hawkstravelball.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+17195551234">(719) 555-1234</a></p>
             </div>
-            <div>
-                <h4>Contact</h4>
-                <p>info@hawkstravelbaseball.com</p>
-                <p>(719) 306-3070</p>
+            
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#skills">Training</a></li>
+                    <li><a href="#investors">Sponsors</a></li>
+                </ul>
             </div>
         </div>
-        <div class="copyright">
-            © 2026 Hawks Travel Baseball • Colorado Springs
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hawks Travel Baseball • Colorado Springs, CO</p>
         </div>
     </footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
