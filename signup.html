@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Hawks Travel Baseball | Sign Up</title>
+    <meta name="description" content="Sign up for Hawks Travel Baseball - Premier Colorado Springs travel baseball program">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .signup-section {
+            min-height: 100vh;
+            padding: 150px 20px 100px;
+            background: white;
+        }
+
+        .signup-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .signup-container h1 {
+            font-size: 2.5rem;
+            color: var(--camo-dark);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .signup-intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: var(--camo-dark);
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--camo-olive);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .radio-option input[type="radio"],
+        .checkbox-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .radio-option label,
+        .checkbox-option label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--camo-olive);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background: var(--camo-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(58,95,62,0.3);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-link a {
+            color: var(--camo-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .back-link a:hover {
+            color: var(--camo-olive);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="images/hawks-logo.png" alt="Hawks Baseball logo">
+            HAWKS TRAVEL
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#skills">Training</a></li>
+                <li><a href="index.html#contact">Join Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SIGNUP FORM -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <h1>Join the Hawks</h1>
+            <p class="signup-intro">Tell us about yourself and your baseball experience</p>
+
+            <form id="signupForm" onsubmit="handleSubmit(event)">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <!-- Age Group -->
+                <div class="form-group">
+                    <label for="agegroup">Age Group *</label>
+                    <select id="agegroup" name="agegroup" required>
+                        <option value="">Select an age group</option>
+                        <option value="10U">10U</option>
+                        <option value="13U">13U</option>
+                        <option value="16U">16U</option>
+                        <option value="18U">18U</option>
+                    </select>
+                </div>
+
+                <!-- Position -->
+                <div class="form-group">
+                    <label>Primary Position *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="position-pitcher" name="position" value="Pitcher" required>
+                            <label for="position-pitcher">Pitcher</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="position-catcher" name="position" value="Catcher">
+                            <label for="position-catcher">Catcher</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="position-infield" name="position" value="Infield">
+                            <label for="position-infield">Infield</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="position-outfield" name="position" value="Outfield">
+                            <label for="position-outfield">Outfield</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="position-utility" name="position" value="Utility">
+                            <label for="position-utility">Utility</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Position -->
+                <div class="form-group">
+                    <label>Secondary Position</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="secondary-pitcher" name="secondary_position" value="Pitcher">
+                            <label for="secondary-pitcher">Pitcher</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="secondary-catcher" name="secondary_position" value="Catcher">
+                            <label for="secondary-catcher">Catcher</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="secondary-infield" name="secondary_position" value="Infield">
+                            <label for="secondary-infield">Infield</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="secondary-outfield" name="secondary_position" value="Outfield">
+                            <label for="secondary-outfield">Outfield</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="secondary-utility" name="secondary_position" value="Utility">
+                            <label for="secondary-utility">Utility</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Throwing Hand -->
+                <div class="form-group">
+                    <label>Throwing Hand *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="hand-right" name="hand" value="Right-Handed" required>
+                            <label for="hand-right">Right-Handed</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="hand-left" name="hand" value="Left-Handed">
+                            <label for="hand-left">Left-Handed</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Years of Experience -->
+                <div class="form-group">
+                    <label for="experience">Years of Baseball Experience *</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select years of experience</option>
+                        <option value="0-1">0-1 years</option>
+                        <option value="1-2">1-2 years</option>
+                        <option value="2-3">2-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="form-group">
+                    <label for="notes">Additional Information</label>
+                    <textarea id="notes" name="notes" placeholder="Tell us anything else you'd like us to know..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+            </form>
+
+            <div class="back-link">
+                <a href="index.html">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Hawks Travel Baseball</h3>
+                <p>Colorado Springs, Colorado</p>
+            </div>
+            <div>
+                <h4>Programs</h4>
+                <p>10U • 13U • 16U • 18U</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>info@hawkstravelbaseball.com</p>
+                <p>(719)306-3070</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Hawks Travel Baseball • Colorado Springs
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(event.target);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                agegroup: formData.get('agegroup'),
+                position: formData.get('position'),
+                secondary_position: formData.get('secondary_position'),
+                hand: formData.get('hand'),
+                experience: formData.get('experience'),
+                notes: formData.get('notes')
+            };
+            
+            // Log form data (you can replace this with actual form submission)
+            console.log('Form Data:', data);
+            
+            // Show success message
+            alert('Thank you for applying to Hawks Travel Baseball!\n\nWe will be in touch shortly at ' + data.phone + '.\n\nGo Hawks!');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Smooth scrolling for header links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
